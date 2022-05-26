@@ -1,0 +1,22 @@
+{
+    "name": "unknownrori/unknownrori-php",
+    "description": "The Rori-PHP Framework",
+    "type": "project",
+    "require-dev": {
+        "symfony/var-dumper": "^6.0",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "classmap": [
+            "app/",
+            "core/"
+        ],
+        "files": [
+            "core/utils/helpers/helpers.php"
+        ]
+    },
+    "require": {
+        "eftec/bladeone": "^4.4"
+    }
+}

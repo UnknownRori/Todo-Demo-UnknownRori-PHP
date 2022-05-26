@@ -1,0 +1,12 @@
+#!php
+<?php
+
+use Core\Console\CLI;
+
+require_once('server.php');
+
+if (php_sapi_name() !== 'cli') {
+    exit;
+}
+
+CLI::Start($argv);
