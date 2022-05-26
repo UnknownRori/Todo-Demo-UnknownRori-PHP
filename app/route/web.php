@@ -9,11 +9,11 @@ Route::get('/', function () {
 
 
 Route::prefix('/auth')->group(function () {
-    Route::get('/login', [UserController::class, 'login']);
-    Route::post('/login', [UserController::class, 'auth']);
+    Route::get('/login', [UserController::class, 'login'])->name('login');
+    Route::post('/login', [UserController::class, 'auth'])->name('auth');
 });
 
 Route::middlewares('auth')->group(function () {
-    Route::post('/auth/logout', [UserController::class, 'logout']);
+    Route::post('/auth/logout', [UserController::class, 'logout'])->name('logout');
     Route::resource('/todo', TodoController::class);
 });
