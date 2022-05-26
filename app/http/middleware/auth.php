@@ -8,6 +8,6 @@ class Authentication
 {
     public function Run()
     {
-        if (!Auth::check()) header("Location: /login");
+        if (!Auth::check()) return redirect('auth.login');
     }
 }
