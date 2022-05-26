@@ -50,6 +50,7 @@ class UserController
         if(!$credentials) return redirect('auth.login', ['error' => 'Username or password is invalid!']);
 
         if(Auth::attempt($credentials)) return redirect('todo.index');
+        return redirect('auth.login', ['error' => 'Username or password is invalid!']);
     }
 
     public function logout()
